@@ -28,7 +28,6 @@ Zwei Streudiagramme zeigen den Zusammenhang zwischen Umsatz und Gewinn sowie zwi
 - **Rabatt und Gewinnmarge hängen zusammen:** Produktgruppen mit geringerem durchschnittlichem Rabatt weisen tendenziell eine höhere Gewinnmarge auf. Am deutlichsten zeigt sich das bei Tables: hohe Umsätze, aber durch überdurchschnittlich hohe Rabatte eine negative Marge.
 - **Nicht jeder Umsatz ist gleich profitabel:** Copiers erzielen bei mittlerem Umsatz den höchsten Gewinn und sind damit die profitabelste Produktgruppe, während Paper bei niedrigem Umsatz eine überdurchschnittlich hohe Marge erreicht – eine kleine, aber profitable Nische.
 - **Regionale Unterschiede:** South ist mit Abstand die umsatzschwächste Region, während West und East deutlich stärker abschneiden – die Matrix mit bedingter Formatierung macht das auf einen Blick sichtbar.
-- **Geografische Konzentration:** Texas gehört trotz eines der umsatzstärkeren Bundesstaaten zu den Staaten mit dem niedrigsten Gewinn – ein Hinweis darauf, dass hohe Verkaufszahlen nicht automatisch mit Profitabilität einhergehen.
 
 ## Tech Stack
 
