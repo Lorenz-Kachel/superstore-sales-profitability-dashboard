@@ -1,15 +1,15 @@
 # Superstore – Umsatz- und Profitabilitätsanalyse (Power BI)
 
-Ein dreiseitiges, interaktives Power-BI-Dashboard zur Analyse von Umsatz, Gewinn und Profitabilität eines fiktiven US-Einzelhandelsunternehmens ("Sample Superstore"). Entstanden als zweites Portfolio-Projekt in den Semesterferien, um praktische Erfahrung mit Power BI, Power Query und DAX zu sammeln.
+Ein dreiseitiges, interaktives Power-BI-Dashboard zur Analyse von Umsatz, Gewinn und Profitabilität eines fiktiven US-Einzelhandelsunternehmens ("Sample Superstore"). Entstanden, um praktische Erfahrung mit Power BI, Power Query und DAX zu sammeln.
 
 ## Datensatz
 
-[Sample Superstore Dataset](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final) (Kaggle) – ca. 9.994 Bestellpositionen eines fiktiven US-Einzelhandelsunternehmens mit Angaben zu Umsatz, Gewinn, Rabatt, Produktkategorie, Kunde, Region und Bundesstaat über mehrere Jahre.
+[Sample Superstore Dataset](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final) (Kaggle) – 9.994 Bestellpositionen eines fiktiven US-Einzelhandelsunternehmens mit Angaben zu Umsatz, Gewinn, Rabatt, Produktkategorie, Kunde, Region und Bundesstaat über mehrere Jahre.
 
 ## Aufbau des Dashboards
 
 ### Seite 1 – Übersicht
-Schneller Gesamtüberblick über die wichtigsten Kennzahlen: Umsatz- und Gewinnentwicklung über die Zeit, Umsatz nach Produktkategorie und Region, Top-5-Produkte nach Umsatz.
+Schneller Gesamtüberblick über die wichtigsten Kennzahlen: Umsatz- und Gewinnentwicklung über die Zeit, Umsatz und Gewinn nach Produktkategorie und Region, Top-5-Produkte nach Umsatz.
 
 ![Übersicht](seite1_uebersicht.png)
 
@@ -19,7 +19,7 @@ Detaillierte geografische Auswertung: Umsatz nach Bundesstaat (Flächenkartogram
 ![Regionalanalyse](seite2_regionalanalyse.png)
 
 ### Seite 3 – Profitabilitätsanalyse
-Die analytisch tiefste Seite: Zwei Streudiagramme zeigen den Zusammenhang zwischen Umsatz und Gewinn sowie zwischen Rabatt und Gewinnmarge je Produktgruppe, ergänzt um die gewinnstärksten und -schwächsten Produkte.
+Zwei Streudiagramme zeigen den Zusammenhang zwischen Umsatz und Gewinn sowie zwischen Rabatt und Gewinnmarge je Produktgruppe, ergänzt um die gewinnstärksten und -schwächsten Produkte.
 
 ![Profitabilitätsanalyse](seite3_profitabilitaet.png)
 
@@ -47,12 +47,11 @@ Anzahl Bestellungen = DISTINCTCOUNT('Sample - Superstore'[Order ID])
 
 ## Was ich dabei gelernt habe
 
-Im Gegensatz zu meinem ersten Projekt (Python/SQL) war der Einstieg in Power BI deutlich klick-basierter, dafür lagen die Herausforderungen an anderer Stelle. Besonders gelernt habe ich:
-
-- Datenimport und -bereinigung in Power Query, inklusive Debugging von zwei nicht offensichtlichen Formatierungsproblemen: Datumswerte wurden zunächst im falschen Ländereinstellungs-Format interpretiert (US- statt deutsches Format), und Zahlenwerte (Sales, Profit) wurden anfangs durch eine Punkt/Komma-Verwechslung um mehrere Größenordnungen falsch berechnet. Beide Fehler ließen sich durch kritisches Hinterfragen der Ergebniswerte (Plausibilitätscheck) aufdecken und über die Gebietsschema-Einstellung beim Datentyp beheben.
+- Datenimport und -bereinigung in Power Query, u. a. Korrektur von Datums- und Zahlenformaten (Gebietsschema-Einstellungen bei importierten US-Daten)
 - Grundlagen von DAX: eigene Measures mit `SUM`, `DIVIDE` und `DISTINCTCOUNT`
-- Den Unterschied zwischen verschiedenen Aggregationsarten und warum die richtige Wahl (z. B. Durchschnitt statt Summe bei Rabatten) für aussagekräftige Analysen entscheidend ist
-- Den Aufbau eines mehrseitigen Dashboards mit konsistentem Layout, Slicern und einer klaren erzählerischen Struktur (Überblick → Detailanalyse → Tiefenanalyse)
+- Unterschiedliche Aggregationsarten richtig einsetzen (z. B. Durchschnitt statt Summe bei Rabatten)
+- Umgang mit verschiedenen Visual-Typen, u. a. Streudiagramm, Flächenkartogramm und Matrix mit bedingter Formatierung
+- Strukturierung eines Dashboards über mehrere Seiten, inklusive Slicern und Top-N-Filtern
 
 ## Hinweis zu den Daten
 
